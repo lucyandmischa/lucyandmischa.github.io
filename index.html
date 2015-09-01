@@ -39,7 +39,6 @@
             <div class="carousel-caption">
               <h1>Another example headline.</h1>
               <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
             </div>
           </div>
         </div>
@@ -49,7 +48,6 @@
             <div class="carousel-caption">
               <h1>One more for good measure.</h1>
               <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
             </div>
           </div>
         </div>
@@ -74,19 +72,19 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
-          <img class="img-circle" src="images/circle-1.jpg" alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-          <p><a class="btn btn-default" href="#featurette-1" role="button">View details &raquo;</a></p>
+          <img class="img" src="images/location.png" alt="Location of Event" width="140" height="140">
+          <h2>On the Day</h2>
+          <p>Some basic information about the venue relating to the day</p>
+          <p><a class="btn btn-default" href="#featurette-1" role="button">See more &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="images/circle-2.jpg" alt="Generic placeholder image" width="140" height="140">
-          <h2>Heading</h2>
+          <img class="img" src="images/information.png" alt="Info" width="140" height="140">
+          <h2>Info</h2>
           <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
           <p><a class="btn btn-default" href="#featurette-2" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="images/circle-3.jpg" alt="Generic placeholder image" width="140" height="140">
+          <img class="img" src="images/present.png" alt="Present" width="140" height="140">
           <h2>Heading</h2>
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
           <p><a class="btn btn-default" href="#featurette-3" role="button">View details &raquo;</a></p>
@@ -175,6 +173,65 @@
               <img class="img-circle" src="images/snorkelling.png" alt="Snorkelling in Borneo" width="140" height="140">
               <h2>Snorkelling</h2>
               <p>Pretty colours</p>
+              <form action="" method="POST">
+                <script
+                  src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                  data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+                  data-amount="4000"
+                  data-name="Lucy &amp; Mischa"
+                  data-description="Honeymoon fund"
+                  data-image="/images/payment_logo.png"
+                  data-allow-remember-me="false" 
+                  data-label="Donate £40"
+                  data-currency="GBP"
+                  data-locale="auto">
+                </script>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <img class="img-circle" src="images/breakfast.png" alt="Sweet!" width="140" height="140">
+              <h2>Breakfast</h2>
+              <p>Sweet or Savoury?</p>
+              <form action="" method="POST">
+                <script
+                  src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                  data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+                  data-amount="1000"
+                  data-name="Lucy &amp; Mischa"
+                  data-description="Honeymoon fund"
+                  data-image="/images/payment_logo.png"
+                  data-allow-remember-me="false" 
+                  data-label="Donate £10"
+                  data-currency="GBP"
+                  data-locale="auto">
+                </script>
+              </form>
+            </div>
+            <div class="col-md-4">
+              <img class="img-circle" src="images/waterfall.png" alt="Timotei" width="140" height="140">
+              <h2>Trip to Waterfall</h2>
+              <p>Timotei</p>
+              <form action="" method="POST">
+                <script
+                  src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                  data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+                  data-amount="2000"
+                  data-name="Lucy &amp; Mischa"
+                  data-description="Honeymoon fund"
+                  data-image="/images/payment_logo.png"
+                  data-allow-remember-me="false" 
+                  data-label="Donate £20"
+                  data-currency="GBP"
+                  data-locale="auto">
+                </script>
+              </form>
+            </div>
+            <div class="col-md-4">
+              <img class="img-circle" src="images/sunset.png" alt="Sunset boat ride" width="140" height="140">
+              <h2>Sunset Boattrip </h2>
+              <p>for kissing</p>
               <form action="" method="POST">
                 <script
                   src="https://checkout.stripe.com/checkout.js" class="stripe-button"
@@ -350,18 +407,16 @@
               </form>
             </div>
             <div class="col-md-4">
+              <img class="img-circle" src="images/clouds.png" alt="Freestyle" width="140" height="140">
               <h2>Other</h2>
               <p>Add in any other amount here!</p>
-
-
-                <textarea id="myTextarea" rows="5" cols="60" placeholder="Type something here..."></textarea>
-
-
-
-<script src="https://checkout.stripe.com/checkout.js"></script>
-
-<button id="customButton">Purchase</button>
-
+              <script src="https://checkout.stripe.com/checkout.js"></script>
+              <div class="input-group">
+                <input id="myTextarea" type="text" class="form-control" placeholder="???">
+                <span class="input-group-btn">
+                  <button id="customButton" class="btn btn-default btn-danger" type="button">Donate</button>
+                </span>
+              </div><!-- /input-group -->
             </div>
           </div>
         </div>
