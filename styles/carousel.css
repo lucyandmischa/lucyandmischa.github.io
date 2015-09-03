@@ -30,14 +30,14 @@ body {
 -------------------------------------------------- */
 
 /* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
+.marketing .col-md-4 {
   margin-bottom: 20px;
   text-align: center;
 }
 .marketing h2 {
   font-weight: normal;
 }
-.marketing .col-lg-4 p {
+.marketing .col-md-4 p {
   margin-right: 10px;
   margin-left: 10px;
 }
@@ -84,7 +84,7 @@ body {
 
 @media (min-width: 768px) {
   .carousel-caption h1 {
-    font-size: 4em;
+    font-size: 5em;
   }
 
   /* Bump up size of carousel content */
@@ -101,12 +101,9 @@ body {
 
 @media (min-width: 992px) {
   .carousel-caption h1 {
-    font-size: 6em;
+    font-size: 9em;
   }
   .featurette-heading {
     margin-top: 120px;
   }
 }
-
-
-
