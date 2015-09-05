@@ -283,7 +283,7 @@
           // Use the token to create the charge with a server-side script.
           // You can access the token ID with `token.id`
           $.ajax({
-            url:"http://charge.lucyandmischa.com/app/charge",
+            url:"https://charge.lucyandmischa.com/app/charge",
             type:"POST",
             data:{ token: token.id, amount: lucyandmischaAmount, email: token.email },
           }).done(function() {
