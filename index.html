@@ -12,10 +12,6 @@
 
     <!-- Custom styles for this template -->
     <link href="styles/carousel.css" rel="stylesheet">
-    <script src="https://checkout.stripe.com/checkout.js"></script>
-    <script type="text/javascript">
-      var lucyandmischaAmount;
-    </script>
   </head>
   <body>
     <!-- Carousel
@@ -292,72 +288,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-    <script>
-      var handler = StripeCheckout.configure({
-        key: 'pk_live_qnCO4JEMHFvRl8QQCHA8jHfu',
-        image: '/images/payment_logo.png',
-        locale: 'auto',
-        token: function(token) {
-          // Use the token to create the charge with a server-side script.
-          // You can access the token ID with `token.id`
-          $.ajax({
-            url:"https://charge.lucyandmischa.com/app/charge",
-            type:"POST",
-            data:{ token: token.id, amount: lucyandmischaAmount, email: token.email },
-          }).done(function() {
-            alert("Thank you for helping us with our honeymoon plans!");
-          }).fail(function() {
-            alert('Sorry an error has occurred. Please reload page and retry');
-          });
-        }
-      });
-
-      $('.stripeButton').on('click', function(e) {
-        var currentText = $(this).attr('data-amount');
-
-        lucyandmischaAmount = currentText;
-
-        handler.open({
-          amount: currentText,
-          name: 'Lucy & Mischa',
-          description: 'Honeymoon fund',
-          allowRememberMe: 'false' ,
-          currency: 'GBP',
-        });
-        e.preventDefault();
-      });
-
-      $('#customButton').on('click', function(e) {
-        var currentText = $("#myTextInput").val();
-        if (!currentText) {
-          currentText = $("#myTextInput").attr('placeholder');
-        }
-
-        if (!parseInt(currentText)) {
-          window.alert("Please enter a real number for donation '"+currentText+"' is not valid number!");
-          return;
-        }
-
-        currentText = currentText * 100;
-
-        lucyandmischaAmount = currentText;
-
-        handler.open({
-          amount: currentText,
-          name: 'Lucy & Mischa',
-          description: 'Honeymoon fund',
-          allowRememberMe: 'false' ,
-          currency: 'GBP',
-        });
-        e.preventDefault();
-      });
-
-      // Close Checkout on page navigation
-      $(window).on('popstate', function() {
-        handler.close();
-      });
-    </script>
 
   </body>
 </html>
